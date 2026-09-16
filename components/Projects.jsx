@@ -39,6 +39,12 @@ function ProjectCard({ project, index }) {
             loop
             playsInline
             preload="auto"
+            onLoadedData={(event) => event.currentTarget.play().catch(() => {})}
+            onEnded={(event) => {
+              const video = event.currentTarget;
+              video.currentTime = 0;
+              video.play().catch(() => {});
+            }}
             onError={() => setVideoError(true)}
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -102,7 +108,7 @@ export default function Projects() {
             Selected work
           </h2>
           <p className="text-ink-soft mt-3">
-            Two systems I designed and built, shown in motion.
+            Three systems I designed and built, shown in motion.
           </p>
         </motion.div>
 

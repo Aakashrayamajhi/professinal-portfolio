@@ -44,13 +44,13 @@ export default function Journey() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
-          className="max-w-xl mb-14"
+          className="mb-14 max-w-none"
         >
           <p className="text-[11px] tracking-[0.2em] uppercase text-red mb-3">Journey</p>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink tracking-tight">
-            From esports to backend systems
+          <h2 className="font-display font-semibold text-3xl text-ink tracking-tight sm:whitespace-nowrap sm:text-4xl">
+            From esports to software engineering
           </h2>
-          <p className="text-ink-soft mt-3">From leading esports teams to leading backend architecture.</p>
+          <p className="text-ink-soft mt-3">From leading esports teams to designing systems built for scale.</p>
         </motion.div>
 
         <div ref={wrapRef} className="relative max-w-3xl">
@@ -64,10 +64,10 @@ export default function Journey() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
-              className={`relative pl-9 ${i === journey.length - 1 ? "" : "pb-12"}`}
+              className={`relative pl-9 ${i === journey.length - 1 ? "ml-9 rounded-2xl border border-dashed border-navy/35 bg-cream-soft/35 px-4 py-6 sm:px-7 sm:py-7" : "pb-12"}`}
             >
-              <span className="absolute left-0 top-1.5 w-[15px] h-[15px] rounded-full bg-cream border-2 border-red" />
-              <p className="font-mono text-xs text-red mb-1.5">{step.period}</p>
+              <span className={`absolute ${i === journey.length - 1 ? "-left-9 top-6 sm:top-7" : "left-0 top-1.5"} w-[15px] h-[15px] rounded-full bg-cream border-2 border-red`} />
+              <p className="font-mono text-xs text-red mb-1.5 uppercase tracking-[0.12em]">{step.period}</p>
               <h3 className="font-display font-medium text-lg text-ink">{step.title}</h3>
               <p className="text-ink-soft mt-2 leading-relaxed max-w-xl">{step.description}</p>
             </motion.div>
