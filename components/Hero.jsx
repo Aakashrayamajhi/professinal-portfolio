@@ -121,7 +121,7 @@ export default function Hero() {
           >
             <div className="relative aspect-[4/5] rounded-sm overflow-hidden border-2 border-ink bg-cream-soft">
               <Image
-                src="/aakash.JPG"
+                src="/aakash.jpeg"
                 alt="Aakash Rayamajhi"
                 fill
                 priority

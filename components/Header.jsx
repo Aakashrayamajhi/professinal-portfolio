@@ -25,7 +25,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
         <a href="#home" aria-label="Aakash Rayamajhi home" className="relative block w-10 h-10 rounded-full overflow-hidden border-2 border-navy/25 hover:border-red transition-colors duration-300">
           <Image
-            src="/aakash.JPG"
+            src="/aakash.jpeg"
             alt="Aakash Rayamajhi"
             fill
             sizes="40px"
